@@ -61,17 +61,9 @@ Docker + Docker Compose
 Streamlit: instale com pip install streamlit
 
 [Faker, Pymongo, Plotly]: instale com:
-
-bash
-Copiar
-Editar
 pip install pymongo faker plotly
 🐳 Subindo o MongoDB com Docker
 No terminal, na raiz do projeto:
-
-bash
-Copiar
-Editar
 docker-compose up -d
 Isso irá:
 
@@ -81,20 +73,34 @@ Criar o container mongo_e_shop
 
 Disponibilizar a porta 27017 localmente
 
+### ● Comandos necessários para configurar e executar o ambiente:
+
+1. **Subir a infraestrutura com Docker Compose**
+
+```bash
+docker-compose up -d
+```
+
+Isso irá:
+- Baixar a imagem oficial do MongoDB
+- Criar o container `mongo_e_shop`
+- Disponibilizar a porta `27017` localmente
+
 Verifique se está rodando com:
 
-bash
-Copiar
-Editar
+```bash
 docker ps
-▶️ Executando a Aplicação Streamlit
-No terminal (com o ambiente virtual ativo ou Anaconda Prompt):
+```
 
-bash
-Copiar
-Editar
+2. **Executar a aplicação Streamlit (`app.py`)**
+
+Com o terminal aberto na pasta do projeto:
+
+```bash
 streamlit run app.py
-Depois, abra seu navegador em: http://localhost:8501
+```
+
+Depois, abra seu navegador em: [http://localhost:8501](http://localhost:8501)
 
 📸 Exemplos de Uso
 Imagens demonstrando o funcionamento da aplicação. Estão disponíveis na pasta exemplos/:
@@ -104,8 +110,7 @@ Inserir produto
 Editar produto	
 Gerar pedidos	
 Gráfico: evolução de pedidos	
-Gráfico: vendas por produto	
-Alerta de estoque baixo	
+Gráfico: vendas por produto		
 
 📌 Observações
 O MongoDB armazena os dados em duas coleções: estoque e pedidos.
